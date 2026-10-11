@@ -1,0 +1,272 @@
+{
+  "incident": "as55410-2021",
+  "collector": "rrc00",
+  "role": "origin",
+  "updates_replayed": 211159310,
+  "baseline_v4": 824,
+  "baseline_v6": 8,
+  "leaked_prefixes": 34891,
+  "leaked_v4": 34891,
+  "leaked_v6": 0,
+  "first_leak_utc": "13:48:58",
+  "path_tail": [
+    [
+      "9498 55410 55410 55410",
+      726502
+    ],
+    [
+      "58299 6939 1273 55410",
+      48856
+    ],
+    [
+      "26073 6939 1273 55410",
+      39814
+    ]
+  ],
+  "via_upstream_pct": 92.2,
+  "upstream_counts": [
+    [
+      "9498",
+      32158
+    ],
+    [
+      "1273",
+      7590
+    ],
+    [
+      "4637",
+      1
+    ]
+  ],
+  "peers_total": 135,
+  "peers_with_leak": 66,
+  "victim_ases": 3174,
+  "top_victims": [
+    {
+      "asn": 11492,
+      "name": "CABLEONE - CABLE ONE, INC.",
+      "prefixes": 1648
+    },
+    {
+      "asn": 16509,
+      "name": "AMAZON-02 - Amazon.com, Inc.",
+      "prefixes": 1298
+    },
+    {
+      "asn": 16625,
+      "name": "AKAMAI-AS - Akamai Technologies, Inc.",
+      "prefixes": 1175
+    },
+    {
+      "asn": 20940,
+      "name": "AKAMAI-ASN1 Akamai International B.V.",
+      "prefixes": 997
+    },
+    {
+      "asn": 6327,
+      "name": "SHAW - Shaw Communications",
+      "prefixes": 824
+    },
+    {
+      "asn": 7552,
+      "name": "VIETEL-AS-AP - Viettel Group",
+      "prefixes": 642
+    },
+    {
+      "asn": 40676,
+      "name": "AS40676 - Psychz Networks",
+      "prefixes": 628
+    },
+    {
+      "asn": 7713,
+      "name": "telkomnet-as-ap - PT Telekomunikasi Indonesia",
+      "prefixes": 571
+    },
+    {
+      "asn": 45820,
+      "name": "TTSL-MEISISP - Tata Teleservices ISP AS",
+      "prefixes": 531
+    },
+    {
+      "asn": 8100,
+      "name": "SPLICE-AS-AP - Splice Internet Pty Ltd",
+      "prefixes": 529
+    },
+    {
+      "asn": 3320,
+      "name": "DTAG Deutsche Telekom AG",
+      "prefixes": 474
+    },
+    {
+      "asn": 7545,
+      "name": "TPG-INTERNET-AP - TPG Telecom Limited",
+      "prefixes": 452
+    },
+    {
+      "asn": 9198,
+      "name": "KAZTELECOM-AS JSC Kazakhtelecom",
+      "prefixes": 415
+    },
+    {
+      "asn": 8452,
+      "name": "TE-AS - IDDQD-AS",
+      "prefixes": 393
+    },
+    {
+      "asn": 20115,
+      "name": "CHARTER-20115 - Charter Communications LLC",
+      "prefixes": 366
+    }
+  ],
+  "rov_then_day": "2021-04-16",
+  "rov_then": {
+    "valid": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "invalid": {
+      "count": 8129,
+      "pct": 23.3
+    },
+    "notfound": {
+      "count": 26762,
+      "pct": 76.7
+    }
+  },
+  "rov_now_day": "2026-10-11",
+  "rov_now": {
+    "valid": {
+      "count": 3,
+      "pct": 0.0
+    },
+    "invalid": {
+      "count": 23088,
+      "pct": 66.2
+    },
+    "notfound": {
+      "count": 11800,
+      "pct": 33.8
+    }
+  },
+  "path_check": {
+    "valley": {
+      "count": 7,
+      "pct": 0.0
+    },
+    "valley-free": {
+      "count": 34880,
+      "pct": 100.0
+    },
+    "unknown": {
+      "count": 4,
+      "pct": 0.0
+    }
+  },
+  "distinct_leaked_paths": {
+    "valley-free": 2410,
+    "valley": 1190,
+    "unknown": 57
+  },
+  "max_prefix": {
+    "1.5x": {
+      "limit": 1236,
+      "trips_at": "13:49:00",
+      "leaked_before_trip": 412,
+      "contained_pct": 98.8
+    },
+    "2x": {
+      "limit": 1648,
+      "trips_at": "13:49:00",
+      "leaked_before_trip": 824,
+      "contained_pct": 97.6
+    },
+    "3x": {
+      "limit": 2472,
+      "trips_at": "13:49:02",
+      "leaked_before_trip": 1648,
+      "contained_pct": 95.3
+    },
+    "5x": {
+      "limit": 4120,
+      "trips_at": "13:49:06",
+      "leaked_before_trip": 3296,
+      "contained_pct": 90.6
+    },
+    "10x": {
+      "limit": 8240,
+      "trips_at": "13:49:47",
+      "leaked_before_trip": 7416,
+      "contained_pct": 78.7
+    }
+  },
+  "checkpoints": {
+    "14:00": {
+      "prefixes": 8016,
+      "victim_ases": 699,
+      "via_upstream": 5126,
+      "peers": 55
+    },
+    "14:30": {
+      "prefixes": 3062,
+      "victim_ases": 287,
+      "via_upstream": 1536,
+      "peers": 25
+    },
+    "15:00": {
+      "prefixes": 1112,
+      "victim_ases": 172,
+      "via_upstream": 1038,
+      "peers": 18
+    },
+    "15:30": {
+      "prefixes": 1092,
+      "victim_ases": 171,
+      "via_upstream": 1018,
+      "peers": 18
+    },
+    "15:59": {
+      "prefixes": 1093,
+      "victim_ases": 171,
+      "via_upstream": 1019,
+      "peers": 18
+    }
+  },
+  "rov_then_has_roa_pct": 23.3,
+  "rov_now_has_roa_pct": 66.2,
+  "rov_then_invalid_pct": 23.3,
+  "rov_now_invalid_pct": 66.2,
+  "path_valley_pct": 0.0,
+  "path_any_valley_pct": 35.2,
+  "lingering": {
+    "14:00": {
+      "prefixes": 8016,
+      "victim_ases": 699,
+      "via_upstream": 5126,
+      "peers": 55
+    },
+    "14:30": {
+      "prefixes": 3062,
+      "victim_ases": 287,
+      "via_upstream": 1536,
+      "peers": 25
+    },
+    "15:00": {
+      "prefixes": 1112,
+      "victim_ases": 172,
+      "via_upstream": 1038,
+      "peers": 18
+    },
+    "15:30": {
+      "prefixes": 1092,
+      "victim_ases": 171,
+      "via_upstream": 1018,
+      "peers": 18
+    },
+    "15:59": {
+      "prefixes": 1093,
+      "victim_ases": 171,
+      "via_upstream": 1019,
+      "peers": 18
+    }
+  }
+}

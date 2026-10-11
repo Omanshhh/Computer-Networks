@@ -1,0 +1,44 @@
+incident,leaked_prefixes,defence,stops_pct,cost,when,never_exported_pct
+as55410-2021,34891,No defence,0.0,-,,
+as55410-2021,34891,"ROV, RPKI as it was then",23.3,none,,
+as55410-2021,34891,"ROV, today's RPKI",66.2,none,,
+as55410-2021,34891,"Path checks (ASPA, RFC 9234, leak detectors)",0.0,none,,
+as55410-2021,34891,Max-prefix at 2x normal,97.6,session torn down: all 824 of the customer's own IPv4 routes lost,13:49:00,
+as55410-2021,34891,Max-prefix at 10x normal,78.7,session torn down: all 824 of the customer's own IPv4 routes lost,13:49:47,
+as55410-2021,34891,Strict customer prefix filter,100.0,"needs a complete, current list; rejects legitimate new routes otherwise",,
+as55410-2021,34891,"ConeGuard, RPKI then",100.0,"customer's own routes untouched; 119 prefixes exported briefly, then pulled",+1s after first leak,99.7
+as55410-2021,34891,"ConeGuard, RPKI now",100.0,"customer's own routes untouched; 119 prefixes exported briefly, then pulled",+1s after first leak,99.7
+rostelecom-2020,8867,No defence,0.0,-,,
+rostelecom-2020,8867,"ROV, RPKI as it was then",78.3,none,,
+rostelecom-2020,8867,"ROV, today's RPKI",90.5,none,,
+rostelecom-2020,8867,"Path checks (ASPA, RFC 9234, leak detectors)",0.0,none,,
+rostelecom-2020,8867,Max-prefix at 2x normal,72.0,session torn down: all 2482 of the customer's own IPv4 routes lost,19:27:28,
+rostelecom-2020,8867,Max-prefix at 10x normal,0.0,session torn down: all 2482 of the customer's own IPv4 routes lost,,
+rostelecom-2020,8867,Strict customer prefix filter,100.0,"needs a complete, current list; rejects legitimate new routes otherwise",,
+rostelecom-2020,8867,"ConeGuard, RPKI then",99.4,"customer's own routes untouched; 106 prefixes exported briefly, then pulled",+4s after first leak,98.2
+rostelecom-2020,8867,"ConeGuard, RPKI now",93.3,"customer's own routes untouched; 0 prefixes exported briefly, then pulled",+4s after first leak,93.3
+indosat-2014,7675,No defence,0.0,-,,
+indosat-2014,7675,"ROV, RPKI as it was then",,no RPKI archive for that day,,
+indosat-2014,7675,"ROV, today's RPKI",69.1,none,,
+indosat-2014,7675,"Path checks (ASPA, RFC 9234, leak detectors)",1.9,none,,
+indosat-2014,7675,Max-prefix at 2x normal,96.0,session torn down: all 303 of the customer's own IPv4 routes lost,18:31:42,
+indosat-2014,7675,Max-prefix at 10x normal,64.4,session torn down: all 303 of the customer's own IPv4 routes lost,18:32:20,
+indosat-2014,7675,Strict customer prefix filter,100.0,"needs a complete, current list; rejects legitimate new routes otherwise",,
+indosat-2014,7675,"ConeGuard, RPKI now",99.6,"customer's own routes untouched; 1 prefixes exported briefly, then pulled",+53s after first leak,99.6
+chinatelecom-2010,18905,No defence,0.0,-,,
+chinatelecom-2010,18905,"ROV, RPKI as it was then",,no RPKI archive for that day,,
+chinatelecom-2010,18905,"ROV, today's RPKI",64.4,none,,
+chinatelecom-2010,18905,"Path checks (ASPA, RFC 9234, leak detectors)",0.0,none,,
+chinatelecom-2010,18905,Max-prefix at 2x normal,99.8,session torn down: all 36 of the customer's own IPv4 routes lost,15:54:31,
+chinatelecom-2010,18905,Max-prefix at 10x normal,98.3,session torn down: all 36 of the customer's own IPv4 routes lost,15:54:32,
+chinatelecom-2010,18905,Strict customer prefix filter,100.0,"needs a complete, current list; rejects legitimate new routes otherwise",,
+chinatelecom-2010,18905,"ConeGuard, RPKI now",99.9,"customer's own routes untouched; 18 prefixes exported briefly, then pulled",+9s after first leak,99.8
+verizon-dqe-2019,6252,No defence,0.0,-,,
+verizon-dqe-2019,6252,"ROV, RPKI as it was then",2.0,none,,
+verizon-dqe-2019,6252,"ROV, today's RPKI",27.4,none,,
+verizon-dqe-2019,6252,"Path checks (ASPA, RFC 9234, leak detectors)",100.0,none,,
+verizon-dqe-2019,6252,Max-prefix at 2x normal,100.0,session torn down: all 1 of the customer's own IPv4 routes lost,10:34:22,
+verizon-dqe-2019,6252,Max-prefix at 10x normal,99.9,session torn down: all 1 of the customer's own IPv4 routes lost,10:34:22,
+verizon-dqe-2019,6252,Strict customer prefix filter,100.0,"needs a complete, current list; rejects legitimate new routes otherwise",,
+verizon-dqe-2019,6252,"ConeGuard, RPKI then",100.0,"customer's own routes untouched; 24 prefixes exported briefly, then pulled",+0s after first leak,99.6
+verizon-dqe-2019,6252,"ConeGuard, RPKI now",100.0,"customer's own routes untouched; 24 prefixes exported briefly, then pulled",+0s after first leak,99.6

@@ -1,0 +1,204 @@
+{
+  "period": "2026-08-31 to 2026-10-10",
+  "history_days": 30,
+  "sessions": 80104,
+  "evaluated_days": 41,
+  "session_days": 3284264,
+  "strict_filter": {
+    "session_days_with_rejections_pct": 1.282,
+    "legitimate_prefixes_rejected": 541750,
+    "rejections_per_session_per_year": 60.21
+  },
+  "max_prefix": {
+    "1.5x": {
+      "false_teardowns": 781,
+      "session_days_pct": 0.0238,
+      "per_session_per_year": 0.0868
+    },
+    "2x": {
+      "false_teardowns": 231,
+      "session_days_pct": 0.007,
+      "per_session_per_year": 0.0257
+    },
+    "3x": {
+      "false_teardowns": 78,
+      "session_days_pct": 0.0024,
+      "per_session_per_year": 0.0087
+    },
+    "10x": {
+      "false_teardowns": 4,
+      "session_days_pct": 0.0001,
+      "per_session_per_year": 0.0004
+    }
+  },
+  "coneguard": [
+    {
+      "burst_new": 5,
+      "burst_owners": 2,
+      "false_alarms": 2569,
+      "session_days_pct": 0.0782,
+      "per_session_per_year": 0.2855
+    },
+    {
+      "burst_new": 5,
+      "burst_owners": 5,
+      "false_alarms": 1635,
+      "session_days_pct": 0.0498,
+      "per_session_per_year": 0.1817
+    },
+    {
+      "burst_new": 5,
+      "burst_owners": 10,
+      "false_alarms": 428,
+      "session_days_pct": 0.013,
+      "per_session_per_year": 0.0476
+    },
+    {
+      "burst_new": 5,
+      "burst_owners": 25,
+      "false_alarms": 40,
+      "session_days_pct": 0.0012,
+      "per_session_per_year": 0.0044
+    },
+    {
+      "burst_new": 10,
+      "burst_owners": 2,
+      "false_alarms": 1205,
+      "session_days_pct": 0.0367,
+      "per_session_per_year": 0.1339
+    },
+    {
+      "burst_new": 10,
+      "burst_owners": 5,
+      "false_alarms": 1029,
+      "session_days_pct": 0.0313,
+      "per_session_per_year": 0.1144
+    },
+    {
+      "burst_new": 10,
+      "burst_owners": 10,
+      "false_alarms": 420,
+      "session_days_pct": 0.0128,
+      "per_session_per_year": 0.0467
+    },
+    {
+      "burst_new": 10,
+      "burst_owners": 25,
+      "false_alarms": 37,
+      "session_days_pct": 0.0011,
+      "per_session_per_year": 0.0041
+    },
+    {
+      "burst_new": 25,
+      "burst_owners": 2,
+      "false_alarms": 244,
+      "session_days_pct": 0.0074,
+      "per_session_per_year": 0.0271
+    },
+    {
+      "burst_new": 25,
+      "burst_owners": 5,
+      "false_alarms": 194,
+      "session_days_pct": 0.0059,
+      "per_session_per_year": 0.0216
+    },
+    {
+      "burst_new": 25,
+      "burst_owners": 10,
+      "false_alarms": 140,
+      "session_days_pct": 0.0043,
+      "per_session_per_year": 0.0156
+    },
+    {
+      "burst_new": 25,
+      "burst_owners": 25,
+      "false_alarms": 33,
+      "session_days_pct": 0.001,
+      "per_session_per_year": 0.0037
+    },
+    {
+      "burst_new": 50,
+      "burst_owners": 2,
+      "false_alarms": 68,
+      "session_days_pct": 0.0021,
+      "per_session_per_year": 0.0076
+    },
+    {
+      "burst_new": 50,
+      "burst_owners": 5,
+      "false_alarms": 58,
+      "session_days_pct": 0.0018,
+      "per_session_per_year": 0.0064
+    },
+    {
+      "burst_new": 50,
+      "burst_owners": 10,
+      "false_alarms": 41,
+      "session_days_pct": 0.0012,
+      "per_session_per_year": 0.0046
+    },
+    {
+      "burst_new": 50,
+      "burst_owners": 25,
+      "false_alarms": 24,
+      "session_days_pct": 0.0007,
+      "per_session_per_year": 0.0027
+    },
+    {
+      "burst_new": 100,
+      "burst_owners": 2,
+      "false_alarms": 12,
+      "session_days_pct": 0.0004,
+      "per_session_per_year": 0.0013
+    },
+    {
+      "burst_new": 100,
+      "burst_owners": 5,
+      "false_alarms": 12,
+      "session_days_pct": 0.0004,
+      "per_session_per_year": 0.0013
+    },
+    {
+      "burst_new": 100,
+      "burst_owners": 10,
+      "false_alarms": 12,
+      "session_days_pct": 0.0004,
+      "per_session_per_year": 0.0013
+    },
+    {
+      "burst_new": 100,
+      "burst_owners": 25,
+      "false_alarms": 12,
+      "session_days_pct": 0.0004,
+      "per_session_per_year": 0.0013
+    },
+    {
+      "burst_new": 250,
+      "burst_owners": 2,
+      "false_alarms": 0,
+      "session_days_pct": 0.0,
+      "per_session_per_year": 0.0
+    },
+    {
+      "burst_new": 250,
+      "burst_owners": 5,
+      "false_alarms": 0,
+      "session_days_pct": 0.0,
+      "per_session_per_year": 0.0
+    },
+    {
+      "burst_new": 250,
+      "burst_owners": 10,
+      "false_alarms": 0,
+      "session_days_pct": 0.0,
+      "per_session_per_year": 0.0
+    },
+    {
+      "burst_new": 250,
+      "burst_owners": 25,
+      "false_alarms": 0,
+      "session_days_pct": 0.0,
+      "per_session_per_year": 0.0
+    }
+  ]
+}

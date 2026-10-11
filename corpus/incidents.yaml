@@ -1,0 +1,94 @@
+# Incident corpus. Times are UTC. `expected` holds published figures the replay is checked against.
+# Candidates to verify and add in step 2: AS12389 Rostelecom 2020-04-01, AS4761 Indosat 2014-04-02,
+# AS23724 China Telecom 2010-04-08, plus path-preserving contrast cases (Verizon/DQE 2019-06-24).
+
+as55410-2021:
+  name: Vodafone Idea mass re-origination
+  leaker: 55410
+  upstream: 9498
+  start: "2021-04-16T13:30:00"
+  end: "2021-04-16T16:00:00"
+  baseline: ["2021-04-14T00:00:00", "2021-04-16T12:00:00"]
+  collectors: [rrc00]
+  checkpoints: ["2021-04-16T14:00:00", "2021-04-16T14:30:00", "2021-04-16T15:00:00", "2021-04-16T15:30:00", "2021-04-16T15:59:59"]
+  expected:
+    baseline_v4: "about 823 IPv4 prefixes [Catchpoint]"
+    baseline_v6: "8 IPv6 prefixes [Catchpoint]"
+    leaked_prefixes: "30,000+ (31,000+ MANRS; 34,000+ Catchpoint across RIS and RouteViews)"
+    first_leak_utc: "13:48:58 [MANRS/Catchpoint]; 13:45 first batch at rrc01 [Bhatia]"
+    path_tail: "... 9498 55410 55410 55410 [Bhatia, MANRS]"
+    via_upstream_pct: "all exiting via AS9498 [MANRS]"
+    peers_with_leak: "64 of 73 rrc00 peers saw at least one [Catchpoint]"
+    rov_then_has_roa_pct: "about 20% (just over 7,000) had ROAs [MANRS, Catchpoint]"
+    lingering: ">1 h for some prefixes; 1,062 prefixes from 168 ASes still hijacked, 991 via AS9498 [Catchpoint]"
+  sources:
+    - https://manrs.org/?p=11068
+    - https://www.catchpoint.com/blog/vodafone-idea-bgp-leak
+    - https://anuragbhatia.com/2021/04/networking/isp-column/large-prefix-hijack-from-vodafone-as55410
+
+rostelecom-2020:
+  name: Rostelecom mass re-origination
+  leaker: 12389
+  start: "2020-04-01T19:00:00"
+  end: "2020-04-01T21:00:00"
+  baseline: ["2020-03-30T00:00:00", "2020-04-01T18:00:00"]
+  collectors: [rrc00]
+  checkpoints: ["2020-04-01T19:45:00", "2020-04-01T20:15:00", "2020-04-01T20:59:59"]
+  expected:
+    leaked_prefixes: "8,800+ prefixes from 200+ networks [MANRS, BGPmon]"
+    first_leak_utc: "19:27:28 [BGPmon]; 19:28 [MANRS]"
+    lingering: "about one hour [MANRS]"
+  sources:
+    - https://manrs.org/2020/04/not-just-another-bgp-hijack/
+
+indosat-2014:
+  name: Indosat mass re-origination
+  leaker: 4761
+  start: "2014-04-02T18:00:00"
+  end: "2014-04-02T22:00:00"
+  baseline: ["2014-03-31T00:00:00", "2014-04-02T17:00:00"]
+  collectors: [rrc00]
+  checkpoints: ["2014-04-02T19:00:00", "2014-04-02T20:00:00", "2014-04-02T21:15:00", "2014-04-02T21:59:59"]
+  expected:
+    leaked_prefixes: "417,038 (BGPmon); 10,635 unique at all RIS collectors 18:00-22:00 [RIPE Labs]"
+    first_leak_utc: "18:26 [RIPE Labs]"
+    lingering: "several hours, until about 21:15 [RIPE Labs]"
+  sources:
+    - https://labs.ripe.net/author/wilhelm/bgp-leaks-in-indonesia
+
+chinatelecom-2010:
+  name: China Telecom mass re-origination
+  leaker: 23724
+  upstream: 4134
+  start: "2010-04-08T15:30:00"
+  end: "2010-04-08T17:00:00"
+  baseline: ["2010-04-06T00:00:00", "2010-04-08T15:00:00"]
+  collectors: [rrc00]
+  checkpoints: ["2010-04-08T16:00:00", "2010-04-08T16:15:00", "2010-04-08T16:59:59"]
+  expected:
+    leaked_prefixes: "31,847 in an 18-minute window [NANOG]; about 50,000 [Hiran et al., PAM 2013]"
+    first_leak_utc: "about 15:54 [NANOG]"
+    path_tail: "... 4134 23724 with prepending [NANOG]"
+  sources:
+    - https://mailman.nanog.org/pipermail/nanog/2010-April/020864.html
+    - https://www.ida.liu.se/~nikca89/papers/pam13.pdf
+
+# Contrast case: a path-preserving leak (RFC 7908 Type 1). The real origins stay in the path,
+# so path checks should flag it while ROV sees mostly valid origins.
+verizon-dqe-2019:
+  name: Verizon / DQE optimiser leak
+  role: transit
+  leaker: 396531
+  upstream: 701
+  start: "2019-06-24T10:00:00"
+  end: "2019-06-24T13:00:00"
+  baseline: ["2019-06-22T00:00:00", "2019-06-24T09:30:00"]
+  collectors: [rrc00]
+  checkpoints: ["2019-06-24T11:00:00", "2019-06-24T12:00:00", "2019-06-24T12:59:59"]
+  expected:
+    leaked_prefixes: "about 20,000 prefixes from 2,400 networks [Cloudflare]"
+    first_leak_utc: "10:34:21 [Cloudflare]"
+    path_tail: "... 701 396531 33154 ... [Cloudflare]"
+    path_valley_pct: "should be high: AS396531 passed provider routes from AS33154 up to provider AS701"
+  sources:
+    - https://blog.cloudflare.com/how-verizon-and-a-bgp-optimizer-knocked-large-parts-of-the-internet-offline-today/

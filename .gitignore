@@ -1,0 +1,27 @@
+# Python
+.venv/
+__pycache__/
+.pytest_cache/
+
+# Downloaded raw data (re-created automatically by measure/fetch.py)
+data/
+*.part
+
+# Documents stay out of the repository: the paper, the report and their PDF copies
+paper/
+report/
+web/public/files/
+*.pdf
+*.docx
+*.pptx
+
+# Website dependencies and build output (npm install && npm run build)
+web/node_modules/
+web/dist/
+
+# Scratch output
+results/logs/
+results/sim_smoke/
+
+# containerlab runtime state: generated per deployment, includes private keys
+lab/clab-*/

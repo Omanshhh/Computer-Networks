@@ -1,0 +1,226 @@
+{
+  "incident": "chinatelecom-2010",
+  "collector": "rrc00",
+  "role": "origin",
+  "updates_replayed": 587783,
+  "baseline_v4": 36,
+  "baseline_v6": 0,
+  "leaked_prefixes": 18905,
+  "leaked_v4": 18905,
+  "leaked_v6": 0,
+  "first_leak_utc": "15:54:22",
+  "path_tail": [
+    [
+      "2914 4134 23724 23724",
+      54904
+    ],
+    [
+      "7018 4134 23724 23724",
+      16331
+    ],
+    [
+      "3257 4134 23724 23724",
+      10967
+    ]
+  ],
+  "via_upstream_pct": 100.0,
+  "upstream_counts": [
+    [
+      "4134",
+      18905
+    ]
+  ],
+  "peers_total": 15,
+  "peers_with_leak": 10,
+  "victim_ases": 1791,
+  "top_victims": [
+    {
+      "asn": 4134,
+      "name": "CHINANET-BACKBONE - No.31,Jin-rong Street",
+      "prefixes": 9158
+    },
+    {
+      "asn": 4538,
+      "name": "ERX-CERNET-BKB - China Education and Research Network Center",
+      "prefixes": 556
+    },
+    {
+      "asn": 1221,
+      "name": "ASN-TELSTRA - Telstra Limited",
+      "prefixes": 547
+    },
+    {
+      "asn": 3215,
+      "name": "AS3215 Orange S.A.",
+      "prefixes": 335
+    },
+    {
+      "asn": 8151,
+      "name": "AS8151 - UNINET",
+      "prefixes": 293
+    },
+    {
+      "asn": 2764,
+      "name": "AAPT - AAPT Limited",
+      "prefixes": 202
+    },
+    {
+      "asn": 16229,
+      "name": "PRIMETEL Primetel PLC",
+      "prefixes": 182
+    },
+    {
+      "asn": 2711,
+      "name": "SPIRITTEL-AS - Spirit Communications",
+      "prefixes": 177
+    },
+    {
+      "asn": 14117,
+      "name": "AS14117 - Telefonica del Sur S.A.",
+      "prefixes": 152
+    },
+    {
+      "asn": 22394,
+      "name": "CELLCO - Verizon Business",
+      "prefixes": 118
+    },
+    {
+      "asn": 4766,
+      "name": "KIXS-AS-KR-KR - Korea Telecom",
+      "prefixes": 112
+    },
+    {
+      "asn": 3505,
+      "name": "WINDSTREAM - Windstream Communications LLC",
+      "prefixes": 106
+    },
+    {
+      "asn": 8517,
+      "name": "ULAKNET National Academic Network and Information Center",
+      "prefixes": 101
+    },
+    {
+      "asn": 33588,
+      "name": "BRESNAN-33588 - Charter Communications LLC",
+      "prefixes": 92
+    },
+    {
+      "asn": 4854,
+      "name": "IINET-AU - Netspace Online Systems",
+      "prefixes": 88
+    }
+  ],
+  "rov_then_day": null,
+  "rov_then": null,
+  "rov_now_day": "2026-10-11",
+  "rov_now": {
+    "valid": {
+      "count": 25,
+      "pct": 0.1
+    },
+    "invalid": {
+      "count": 12179,
+      "pct": 64.4
+    },
+    "notfound": {
+      "count": 6701,
+      "pct": 35.4
+    }
+  },
+  "path_check": {
+    "valley": {
+      "count": 1,
+      "pct": 0.0
+    },
+    "valley-free": {
+      "count": 18904,
+      "pct": 100.0
+    },
+    "unknown": {
+      "count": 0,
+      "pct": 0.0
+    }
+  },
+  "distinct_leaked_paths": {
+    "valley-free": 65,
+    "valley": 42
+  },
+  "max_prefix": {
+    "1.5x": {
+      "limit": 54,
+      "trips_at": "15:54:31",
+      "leaked_before_trip": 18,
+      "contained_pct": 99.9
+    },
+    "2x": {
+      "limit": 72,
+      "trips_at": "15:54:31",
+      "leaked_before_trip": 36,
+      "contained_pct": 99.8
+    },
+    "3x": {
+      "limit": 108,
+      "trips_at": "15:54:31",
+      "leaked_before_trip": 72,
+      "contained_pct": 99.6
+    },
+    "5x": {
+      "limit": 180,
+      "trips_at": "15:54:31",
+      "leaked_before_trip": 144,
+      "contained_pct": 99.2
+    },
+    "10x": {
+      "limit": 360,
+      "trips_at": "15:54:32",
+      "leaked_before_trip": 324,
+      "contained_pct": 98.3
+    }
+  },
+  "checkpoints": {
+    "16:00": {
+      "prefixes": 10297,
+      "victim_ases": 372,
+      "via_upstream": 10297,
+      "peers": 10
+    },
+    "16:15": {
+      "prefixes": 48,
+      "victim_ases": 22,
+      "via_upstream": 48,
+      "peers": 3
+    },
+    "16:59": {
+      "prefixes": 3,
+      "victim_ases": 0,
+      "via_upstream": 3,
+      "peers": 1
+    }
+  },
+  "rov_then_has_roa_pct": null,
+  "rov_now_has_roa_pct": 64.6,
+  "rov_then_invalid_pct": null,
+  "rov_now_invalid_pct": 64.4,
+  "path_valley_pct": 0.0,
+  "path_any_valley_pct": 39.5,
+  "lingering": {
+    "16:00": {
+      "prefixes": 10297,
+      "victim_ases": 372,
+      "via_upstream": 10297,
+      "peers": 10
+    },
+    "16:15": {
+      "prefixes": 48,
+      "victim_ases": 22,
+      "via_upstream": 48,
+      "peers": 3
+    },
+    "16:59": {
+      "prefixes": 3,
+      "victim_ases": 0,
+      "via_upstream": 3,
+      "peers": 1
+    }
+  }
+}

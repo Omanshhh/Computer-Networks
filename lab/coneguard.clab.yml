@@ -1,0 +1,77 @@
+# ConeGuard demo: the April 2021 Vodafone Idea leak, replayed on a small emulated Internet.
+#
+#   vodafone-web          google-web (172.217.179.10)    fastly-web (167.82.163.10)
+#        |                       |                              |
+#   vodafone AS55410 --c2p--> airtel AS9498 <--peer-- google AS15169
+#                               ^   ^----------peer-- fastly AS54113
+#                               | c2p
+#                          userisp AS64600 -- user (100.64.0.10)
+#
+# The demo injects the real prefixes AS55410 leaked in 2021 into Vodafone as static routes, which it
+# re-originates to Airtel with AS_PATH "55410", exactly like the incident. Airtel prefers customer
+# routes, so the user's traffic to Google and Fastly is pulled to Vodafone and dropped.
+name: coneguard
+
+topology:
+  kinds:
+    linux:
+      image: alpine:3.22
+  nodes:
+    vodafone:
+      kind: linux
+      image: quay.io/frrouting/frr:10.7.1
+      binds: [configs/vodafone/frr.conf:/etc/frr/frr.conf, configs/daemons:/etc/frr/daemons, configs/vtysh.conf:/etc/frr/vtysh.conf]
+    airtel:
+      kind: linux
+      image: quay.io/frrouting/frr:10.7.1
+      binds: [configs/airtel/frr.conf:/etc/frr/frr.conf, configs/daemons:/etc/frr/daemons, configs/vtysh.conf:/etc/frr/vtysh.conf]
+    google:
+      kind: linux
+      image: quay.io/frrouting/frr:10.7.1
+      binds: [configs/google/frr.conf:/etc/frr/frr.conf, configs/daemons:/etc/frr/daemons, configs/vtysh.conf:/etc/frr/vtysh.conf]
+    fastly:
+      kind: linux
+      image: quay.io/frrouting/frr:10.7.1
+      binds: [configs/fastly/frr.conf:/etc/frr/frr.conf, configs/daemons:/etc/frr/daemons, configs/vtysh.conf:/etc/frr/vtysh.conf]
+    userisp:
+      kind: linux
+      image: quay.io/frrouting/frr:10.7.1
+      binds: [configs/userisp/frr.conf:/etc/frr/frr.conf, configs/daemons:/etc/frr/daemons, configs/vtysh.conf:/etc/frr/vtysh.conf]
+    google-web:
+      kind: linux
+      image: python:3.13-alpine
+      exec:
+        - ip addr add 172.217.179.10/24 dev eth1
+        - ip route add 100.64.0.0/24 via 172.217.179.1
+        - sh -c "mkdir -p /www && echo \'Google is reachable\' > /www/index.html && nohup python -m http.server 80 --directory /www >/dev/null 2>&1 &"
+    fastly-web:
+      kind: linux
+      image: python:3.13-alpine
+      exec:
+        - ip addr add 167.82.163.10/24 dev eth1
+        - ip route add 100.64.0.0/24 via 167.82.163.1
+        - sh -c "mkdir -p /www && echo \'Fastly is reachable\' > /www/index.html && nohup python -m http.server 80 --directory /www >/dev/null 2>&1 &"
+    vodafone-web:
+      kind: linux
+      image: python:3.13-alpine
+      exec:
+        - ip addr add 118.185.0.10/24 dev eth1
+        - ip route add 100.64.0.0/24 via 118.185.0.1
+        - sh -c "mkdir -p /www && echo \'Vodafone is reachable\' > /www/index.html && nohup python -m http.server 80 --directory /www >/dev/null 2>&1 &"
+    user:
+      kind: linux
+      exec:
+        - ip addr add 100.64.0.10/24 dev eth1
+        - ip route add 172.217.179.0/24 via 100.64.0.1
+        - ip route add 167.82.163.0/24 via 100.64.0.1
+        - ip route add 118.185.0.0/16 via 100.64.0.1
+
+  links:
+    - endpoints: ["vodafone:eth1", "airtel:eth1"]
+    - endpoints: ["airtel:eth2", "google:eth1"]
+    - endpoints: ["airtel:eth3", "fastly:eth1"]
+    - endpoints: ["airtel:eth4", "userisp:eth1"]
+    - endpoints: ["vodafone:eth2", "vodafone-web:eth1"]
+    - endpoints: ["google:eth2", "google-web:eth1"]
+    - endpoints: ["fastly:eth2", "fastly-web:eth1"]
+    - endpoints: ["userisp:eth2", "user:eth1"]

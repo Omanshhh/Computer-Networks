@@ -1,0 +1,16 @@
+/* From React Bits (https://reactbits.dev). Font size adjusted to the site type scale. */
+.scroll-reveal {
+  margin: 0;
+}
+
+.scroll-reveal-text {
+  font-size: clamp(1.6rem, 3.4vw, 2.75rem);
+  line-height: 1.25;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  margin: 0;
+}
+
+.word {
+  display: inline-block;
+}

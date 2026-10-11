@@ -1,0 +1,1210 @@
+{
+ "incidents": [
+  {
+   "id": "as55410-2021",
+   "name": "Vodafone Idea",
+   "year": 2021,
+   "asn": 55410,
+   "kind": "re-origination",
+   "leaked": 34891,
+   "normal": 824,
+   "firstLeak": "13:48:58",
+   "victims": 3174,
+   "rovThen": 23.3,
+   "rovNow": 66.2,
+   "pathChecks": 0.0,
+   "maxPrefix2x": 97.6,
+   "maxPrefix10x": 78.7,
+   "coneguard": 100.0,
+   "triggerSeconds": 1
+  },
+  {
+   "id": "rostelecom-2020",
+   "name": "Rostelecom",
+   "year": 2020,
+   "asn": 12389,
+   "kind": "re-origination",
+   "leaked": 8867,
+   "normal": 2482,
+   "firstLeak": "19:27:06",
+   "victims": 175,
+   "rovThen": 78.3,
+   "rovNow": 90.5,
+   "pathChecks": 0.0,
+   "maxPrefix2x": 72.0,
+   "maxPrefix10x": 0.0,
+   "coneguard": 93.3,
+   "triggerSeconds": 4
+  },
+  {
+   "id": "indosat-2014",
+   "name": "Indosat",
+   "year": 2014,
+   "asn": 4761,
+   "kind": "re-origination",
+   "leaked": 7675,
+   "normal": 303,
+   "firstLeak": "18:25:31",
+   "victims": 1388,
+   "rovThen": null,
+   "rovNow": 69.1,
+   "pathChecks": 1.9,
+   "maxPrefix2x": 96.0,
+   "maxPrefix10x": 64.4,
+   "coneguard": 99.6,
+   "triggerSeconds": 53
+  },
+  {
+   "id": "chinatelecom-2010",
+   "name": "China Telecom",
+   "year": 2010,
+   "asn": 23724,
+   "kind": "re-origination",
+   "leaked": 18905,
+   "normal": 36,
+   "firstLeak": "15:54:22",
+   "victims": 1791,
+   "rovThen": null,
+   "rovNow": 64.4,
+   "pathChecks": 0.0,
+   "maxPrefix2x": 99.8,
+   "maxPrefix10x": 98.3,
+   "coneguard": 99.9,
+   "triggerSeconds": 9
+  },
+  {
+   "id": "verizon-dqe-2019",
+   "name": "Verizon / DQE",
+   "year": 2019,
+   "asn": 396531,
+   "kind": "path-preserving",
+   "leaked": 6252,
+   "normal": 1,
+   "firstLeak": "10:34:22",
+   "victims": 794,
+   "rovThen": 2.0,
+   "rovNow": 27.4,
+   "pathChecks": 100.0,
+   "maxPrefix2x": 100.0,
+   "maxPrefix10x": 99.9,
+   "coneguard": 100.0,
+   "triggerSeconds": 0
+  }
+ ],
+ "timeline2021": [
+  {
+   "t": "13:30",
+   "seen": 0,
+   "active": 0
+  },
+  {
+   "t": "13:31",
+   "seen": 0,
+   "active": 0
+  },
+  {
+   "t": "13:32",
+   "seen": 0,
+   "active": 0
+  },
+  {
+   "t": "13:33",
+   "seen": 0,
+   "active": 0
+  },
+  {
+   "t": "13:34",
+   "seen": 0,
+   "active": 0
+  },
+  {
+   "t": "13:35",
+   "seen": 0,
+   "active": 0
+  },
+  {
+   "t": "13:36",
+   "seen": 0,
+   "active": 0
+  },
+  {
+   "t": "13:37",
+   "seen": 0,
+   "active": 0
+  },
+  {
+   "t": "13:38",
+   "seen": 0,
+   "active": 0
+  },
+  {
+   "t": "13:39",
+   "seen": 0,
+   "active": 0
+  },
+  {
+   "t": "13:40",
+   "seen": 0,
+   "active": 0
+  },
+  {
+   "t": "13:41",
+   "seen": 0,
+   "active": 0
+  },
+  {
+   "t": "13:42",
+   "seen": 0,
+   "active": 0
+  },
+  {
+   "t": "13:43",
+   "seen": 0,
+   "active": 0
+  },
+  {
+   "t": "13:44",
+   "seen": 0,
+   "active": 0
+  },
+  {
+   "t": "13:45",
+   "seen": 0,
+   "active": 0
+  },
+  {
+   "t": "13:46",
+   "seen": 0,
+   "active": 0
+  },
+  {
+   "t": "13:47",
+   "seen": 0,
+   "active": 0
+  },
+  {
+   "t": "13:48",
+   "seen": 288,
+   "active": 288
+  },
+  {
+   "t": "13:49",
+   "seen": 9429,
+   "active": 6673
+  },
+  {
+   "t": "13:50",
+   "seen": 11152,
+   "active": 6811
+  },
+  {
+   "t": "13:51",
+   "seen": 17069,
+   "active": 9824
+  },
+  {
+   "t": "13:52",
+   "seen": 20323,
+   "active": 11756
+  },
+  {
+   "t": "13:53",
+   "seen": 28008,
+   "active": 15247
+  },
+  {
+   "t": "13:54",
+   "seen": 28913,
+   "active": 12168
+  },
+  {
+   "t": "13:55",
+   "seen": 34365,
+   "active": 12929
+  },
+  {
+   "t": "13:56",
+   "seen": 34570,
+   "active": 8898
+  },
+  {
+   "t": "13:57",
+   "seen": 34888,
+   "active": 9206
+  },
+  {
+   "t": "13:58",
+   "seen": 34891,
+   "active": 7558
+  },
+  {
+   "t": "13:59",
+   "seen": 34891,
+   "active": 8016
+  },
+  {
+   "t": "14:00",
+   "seen": 34891,
+   "active": 7725
+  },
+  {
+   "t": "14:01",
+   "seen": 34891,
+   "active": 7212
+  },
+  {
+   "t": "14:02",
+   "seen": 34891,
+   "active": 7337
+  },
+  {
+   "t": "14:03",
+   "seen": 34891,
+   "active": 6463
+  },
+  {
+   "t": "14:04",
+   "seen": 34891,
+   "active": 4698
+  },
+  {
+   "t": "14:05",
+   "seen": 34891,
+   "active": 4398
+  },
+  {
+   "t": "14:06",
+   "seen": 34891,
+   "active": 4559
+  },
+  {
+   "t": "14:07",
+   "seen": 34891,
+   "active": 4478
+  },
+  {
+   "t": "14:08",
+   "seen": 34891,
+   "active": 4888
+  },
+  {
+   "t": "14:09",
+   "seen": 34891,
+   "active": 4609
+  },
+  {
+   "t": "14:10",
+   "seen": 34891,
+   "active": 4492
+  },
+  {
+   "t": "14:11",
+   "seen": 34891,
+   "active": 4409
+  },
+  {
+   "t": "14:12",
+   "seen": 34891,
+   "active": 4322
+  },
+  {
+   "t": "14:13",
+   "seen": 34891,
+   "active": 4335
+  },
+  {
+   "t": "14:14",
+   "seen": 34891,
+   "active": 4205
+  },
+  {
+   "t": "14:15",
+   "seen": 34891,
+   "active": 4152
+  },
+  {
+   "t": "14:16",
+   "seen": 34891,
+   "active": 4097
+  },
+  {
+   "t": "14:17",
+   "seen": 34891,
+   "active": 4074
+  },
+  {
+   "t": "14:18",
+   "seen": 34891,
+   "active": 4156
+  },
+  {
+   "t": "14:19",
+   "seen": 34891,
+   "active": 4060
+  },
+  {
+   "t": "14:20",
+   "seen": 34891,
+   "active": 3741
+  },
+  {
+   "t": "14:21",
+   "seen": 34891,
+   "active": 3767
+  },
+  {
+   "t": "14:22",
+   "seen": 34891,
+   "active": 3942
+  },
+  {
+   "t": "14:23",
+   "seen": 34891,
+   "active": 3915
+  },
+  {
+   "t": "14:24",
+   "seen": 34891,
+   "active": 3889
+  },
+  {
+   "t": "14:25",
+   "seen": 34891,
+   "active": 3600
+  },
+  {
+   "t": "14:26",
+   "seen": 34891,
+   "active": 3411
+  },
+  {
+   "t": "14:27",
+   "seen": 34891,
+   "active": 3248
+  },
+  {
+   "t": "14:28",
+   "seen": 34891,
+   "active": 3217
+  },
+  {
+   "t": "14:29",
+   "seen": 34891,
+   "active": 3062
+  },
+  {
+   "t": "14:30",
+   "seen": 34891,
+   "active": 3004
+  },
+  {
+   "t": "14:31",
+   "seen": 34891,
+   "active": 3660
+  },
+  {
+   "t": "14:32",
+   "seen": 34891,
+   "active": 3484
+  },
+  {
+   "t": "14:33",
+   "seen": 34891,
+   "active": 3162
+  },
+  {
+   "t": "14:34",
+   "seen": 34891,
+   "active": 2774
+  },
+  {
+   "t": "14:35",
+   "seen": 34891,
+   "active": 2714
+  },
+  {
+   "t": "14:36",
+   "seen": 34891,
+   "active": 2804
+  },
+  {
+   "t": "14:37",
+   "seen": 34891,
+   "active": 2770
+  },
+  {
+   "t": "14:38",
+   "seen": 34891,
+   "active": 2673
+  },
+  {
+   "t": "14:39",
+   "seen": 34891,
+   "active": 2257
+  },
+  {
+   "t": "14:40",
+   "seen": 34891,
+   "active": 1931
+  },
+  {
+   "t": "14:41",
+   "seen": 34891,
+   "active": 1914
+  },
+  {
+   "t": "14:42",
+   "seen": 34891,
+   "active": 1866
+  },
+  {
+   "t": "14:43",
+   "seen": 34891,
+   "active": 1846
+  },
+  {
+   "t": "14:44",
+   "seen": 34891,
+   "active": 1414
+  },
+  {
+   "t": "14:45",
+   "seen": 34891,
+   "active": 1389
+  },
+  {
+   "t": "14:46",
+   "seen": 34891,
+   "active": 1201
+  },
+  {
+   "t": "14:47",
+   "seen": 34891,
+   "active": 1201
+  },
+  {
+   "t": "14:48",
+   "seen": 34891,
+   "active": 1184
+  },
+  {
+   "t": "14:49",
+   "seen": 34891,
+   "active": 1188
+  },
+  {
+   "t": "14:50",
+   "seen": 34891,
+   "active": 1200
+  },
+  {
+   "t": "14:51",
+   "seen": 34891,
+   "active": 1148
+  },
+  {
+   "t": "14:52",
+   "seen": 34891,
+   "active": 1120
+  },
+  {
+   "t": "14:53",
+   "seen": 34891,
+   "active": 1114
+  },
+  {
+   "t": "14:54",
+   "seen": 34891,
+   "active": 1113
+  },
+  {
+   "t": "14:55",
+   "seen": 34891,
+   "active": 1111
+  },
+  {
+   "t": "14:56",
+   "seen": 34891,
+   "active": 1111
+  },
+  {
+   "t": "14:57",
+   "seen": 34891,
+   "active": 1111
+  },
+  {
+   "t": "14:58",
+   "seen": 34891,
+   "active": 1112
+  },
+  {
+   "t": "14:59",
+   "seen": 34891,
+   "active": 1112
+  },
+  {
+   "t": "15:00",
+   "seen": 34891,
+   "active": 1112
+  },
+  {
+   "t": "15:01",
+   "seen": 34891,
+   "active": 1112
+  },
+  {
+   "t": "15:02",
+   "seen": 34891,
+   "active": 1112
+  },
+  {
+   "t": "15:03",
+   "seen": 34891,
+   "active": 1112
+  },
+  {
+   "t": "15:04",
+   "seen": 34891,
+   "active": 1112
+  },
+  {
+   "t": "15:05",
+   "seen": 34891,
+   "active": 1112
+  },
+  {
+   "t": "15:06",
+   "seen": 34891,
+   "active": 1112
+  },
+  {
+   "t": "15:07",
+   "seen": 34891,
+   "active": 1112
+  },
+  {
+   "t": "15:08",
+   "seen": 34891,
+   "active": 1114
+  },
+  {
+   "t": "15:09",
+   "seen": 34891,
+   "active": 1115
+  },
+  {
+   "t": "15:10",
+   "seen": 34891,
+   "active": 1115
+  },
+  {
+   "t": "15:11",
+   "seen": 34891,
+   "active": 1115
+  },
+  {
+   "t": "15:12",
+   "seen": 34891,
+   "active": 1115
+  },
+  {
+   "t": "15:13",
+   "seen": 34891,
+   "active": 1115
+  },
+  {
+   "t": "15:14",
+   "seen": 34891,
+   "active": 1104
+  },
+  {
+   "t": "15:15",
+   "seen": 34891,
+   "active": 1102
+  },
+  {
+   "t": "15:16",
+   "seen": 34891,
+   "active": 1102
+  },
+  {
+   "t": "15:17",
+   "seen": 34891,
+   "active": 1102
+  },
+  {
+   "t": "15:18",
+   "seen": 34891,
+   "active": 1102
+  },
+  {
+   "t": "15:19",
+   "seen": 34891,
+   "active": 1102
+  },
+  {
+   "t": "15:20",
+   "seen": 34891,
+   "active": 1102
+  },
+  {
+   "t": "15:21",
+   "seen": 34891,
+   "active": 1102
+  },
+  {
+   "t": "15:22",
+   "seen": 34891,
+   "active": 1102
+  },
+  {
+   "t": "15:23",
+   "seen": 34891,
+   "active": 1102
+  },
+  {
+   "t": "15:24",
+   "seen": 34891,
+   "active": 1102
+  },
+  {
+   "t": "15:25",
+   "seen": 34891,
+   "active": 1102
+  },
+  {
+   "t": "15:26",
+   "seen": 34891,
+   "active": 1102
+  },
+  {
+   "t": "15:27",
+   "seen": 34891,
+   "active": 1100
+  },
+  {
+   "t": "15:28",
+   "seen": 34891,
+   "active": 1092
+  },
+  {
+   "t": "15:29",
+   "seen": 34891,
+   "active": 1092
+  },
+  {
+   "t": "15:30",
+   "seen": 34891,
+   "active": 1092
+  },
+  {
+   "t": "15:31",
+   "seen": 34891,
+   "active": 1092
+  },
+  {
+   "t": "15:32",
+   "seen": 34891,
+   "active": 1092
+  },
+  {
+   "t": "15:33",
+   "seen": 34891,
+   "active": 1092
+  },
+  {
+   "t": "15:34",
+   "seen": 34891,
+   "active": 1092
+  },
+  {
+   "t": "15:35",
+   "seen": 34891,
+   "active": 1093
+  },
+  {
+   "t": "15:36",
+   "seen": 34891,
+   "active": 1093
+  },
+  {
+   "t": "15:37",
+   "seen": 34891,
+   "active": 1093
+  },
+  {
+   "t": "15:38",
+   "seen": 34891,
+   "active": 1093
+  },
+  {
+   "t": "15:39",
+   "seen": 34891,
+   "active": 1093
+  },
+  {
+   "t": "15:40",
+   "seen": 34891,
+   "active": 1093
+  },
+  {
+   "t": "15:41",
+   "seen": 34891,
+   "active": 1093
+  },
+  {
+   "t": "15:42",
+   "seen": 34891,
+   "active": 1093
+  },
+  {
+   "t": "15:43",
+   "seen": 34891,
+   "active": 1093
+  },
+  {
+   "t": "15:44",
+   "seen": 34891,
+   "active": 1093
+  },
+  {
+   "t": "15:45",
+   "seen": 34891,
+   "active": 1093
+  },
+  {
+   "t": "15:46",
+   "seen": 34891,
+   "active": 1093
+  },
+  {
+   "t": "15:47",
+   "seen": 34891,
+   "active": 1093
+  },
+  {
+   "t": "15:48",
+   "seen": 34891,
+   "active": 1093
+  },
+  {
+   "t": "15:49",
+   "seen": 34891,
+   "active": 1093
+  },
+  {
+   "t": "15:50",
+   "seen": 34891,
+   "active": 1093
+  },
+  {
+   "t": "15:51",
+   "seen": 34891,
+   "active": 1093
+  },
+  {
+   "t": "15:52",
+   "seen": 34891,
+   "active": 1093
+  },
+  {
+   "t": "15:53",
+   "seen": 34891,
+   "active": 1093
+  },
+  {
+   "t": "15:54",
+   "seen": 34891,
+   "active": 1093
+  },
+  {
+   "t": "15:55",
+   "seen": 34891,
+   "active": 1093
+  },
+  {
+   "t": "15:56",
+   "seen": 34891,
+   "active": 1093
+  },
+  {
+   "t": "15:57",
+   "seen": 34891,
+   "active": 1093
+  },
+  {
+   "t": "15:58",
+   "seen": 34891,
+   "active": 1093
+  }
+ ],
+ "gates2021": {
+  "airtel": 32158,
+  "vodafoneGlobal": 7590,
+  "onlyVodafoneGlobal": 2733,
+  "total": 34891
+ },
+ "falseAlarms": {
+  "sessions": 80104,
+  "days": 41,
+  "strictFilter": 4.6793,
+  "maxPrefix2x": 0.0256,
+  "coneguard": [
+   {
+    "n": 5,
+    "k": 2,
+    "perYear": 0.2854
+   },
+   {
+    "n": 5,
+    "k": 5,
+    "perYear": 0.1818
+   },
+   {
+    "n": 5,
+    "k": 10,
+    "perYear": 0.0474
+   },
+   {
+    "n": 5,
+    "k": 25,
+    "perYear": 0.0044
+   },
+   {
+    "n": 10,
+    "k": 2,
+    "perYear": 0.134
+   },
+   {
+    "n": 10,
+    "k": 5,
+    "perYear": 0.1142
+   },
+   {
+    "n": 10,
+    "k": 10,
+    "perYear": 0.0467
+   },
+   {
+    "n": 10,
+    "k": 25,
+    "perYear": 0.004
+   },
+   {
+    "n": 25,
+    "k": 2,
+    "perYear": 0.027
+   },
+   {
+    "n": 25,
+    "k": 5,
+    "perYear": 0.0215
+   },
+   {
+    "n": 25,
+    "k": 10,
+    "perYear": 0.0157
+   },
+   {
+    "n": 25,
+    "k": 25,
+    "perYear": 0.0037
+   },
+   {
+    "n": 50,
+    "k": 2,
+    "perYear": 0.0077
+   },
+   {
+    "n": 50,
+    "k": 5,
+    "perYear": 0.0066
+   },
+   {
+    "n": 50,
+    "k": 10,
+    "perYear": 0.0044
+   },
+   {
+    "n": 50,
+    "k": 25,
+    "perYear": 0.0026
+   },
+   {
+    "n": 100,
+    "k": 2,
+    "perYear": 0.0015
+   },
+   {
+    "n": 100,
+    "k": 5,
+    "perYear": 0.0015
+   },
+   {
+    "n": 100,
+    "k": 10,
+    "perYear": 0.0015
+   },
+   {
+    "n": 100,
+    "k": 25,
+    "perYear": 0.0015
+   },
+   {
+    "n": 250,
+    "k": 2,
+    "perYear": 0.0
+   },
+   {
+    "n": 250,
+    "k": 5,
+    "perYear": 0.0
+   },
+   {
+    "n": 250,
+    "k": 10,
+    "perYear": 0.0
+   },
+   {
+    "n": 250,
+    "k": 25,
+    "perYear": 0.0
+   }
+  ]
+ },
+ "tradeoff": [
+  {
+   "n": 5,
+   "worstSeconds": 53,
+   "perYear": 0.1817
+  },
+  {
+   "n": 10,
+   "worstSeconds": 53,
+   "perYear": 0.1144
+  },
+  {
+   "n": 25,
+   "worstSeconds": 53,
+   "perYear": 0.0216
+  },
+  {
+   "n": 50,
+   "worstSeconds": 106,
+   "perYear": 0.0064
+  },
+  {
+   "n": 100,
+   "worstSeconds": 371,
+   "perYear": 0.0013
+  },
+  {
+   "n": 250,
+   "worstSeconds": 371,
+   "perYear": 0.0
+  }
+ ],
+ "simulation": {
+  "adoption": [
+   10,
+   50,
+   99
+  ],
+  "withRoa": {
+   "ASPA": {
+    "value": [
+     45.9,
+     8.8,
+     0.0
+    ],
+    "err": [
+     21.1,
+     6.6,
+     0.0
+    ]
+   },
+   "ConeGuard + peers": {
+    "value": [
+     45.9,
+     8.8,
+     0.0
+    ],
+    "err": [
+     21.1,
+     6.6,
+     0.0
+    ]
+   },
+   "ConeGuard": {
+    "value": [
+     45.9,
+     8.8,
+     0.0
+    ],
+    "err": [
+     21.1,
+     6.6,
+     0.0
+    ]
+   },
+   "OnlyToCustomers": {
+    "value": [
+     57.9,
+     57.9,
+     57.9
+    ],
+    "err": [
+     25.9,
+     25.9,
+     25.9
+    ]
+   },
+   "Peerlock Lite": {
+    "value": [
+     57.9,
+     57.9,
+     57.9
+    ],
+    "err": [
+     25.9,
+     25.9,
+     25.9
+    ]
+   },
+   "ROV": {
+    "value": [
+     45.9,
+     8.8,
+     0.0
+    ],
+    "err": [
+     21.1,
+     6.6,
+     0.0
+    ]
+   }
+  },
+  "withoutRoa": {
+   "ASPA": {
+    "value": [
+     57.9,
+     57.9,
+     57.9
+    ],
+    "err": [
+     25.9,
+     25.9,
+     25.9
+    ]
+   },
+   "ConeGuard + peers": {
+    "value": [
+     54.6,
+     29.6,
+     0.1
+    ],
+    "err": [
+     23.9,
+     21.8,
+     0.2
+    ]
+   },
+   "ConeGuard": {
+    "value": [
+     55.7,
+     32.7,
+     5.0
+    ],
+    "err": [
+     24.5,
+     23.2,
+     6.1
+    ]
+   },
+   "OnlyToCustomers": {
+    "value": [
+     57.9,
+     57.9,
+     57.9
+    ],
+    "err": [
+     25.9,
+     25.9,
+     25.9
+    ]
+   },
+   "Peerlock Lite": {
+    "value": [
+     57.9,
+     57.9,
+     57.9
+    ],
+    "err": [
+     25.9,
+     25.9,
+     25.9
+    ]
+   },
+   "ROV": {
+    "value": [
+     57.9,
+     57.9,
+     57.9
+    ],
+    "err": [
+     25.9,
+     25.9,
+     25.9
+    ]
+   }
+  }
+ },
+ "code": [
+  {
+   "path": "measure/fetch.py",
+   "what": "Downloads public data, resuming dropped transfers",
+   "lines": 114
+  },
+  {
+   "path": "measure/extract.py",
+   "what": "Replays BGP updates and tracks every leaked route",
+   "lines": 131
+  },
+  {
+   "path": "measure/rpki.py",
+   "what": "RPKI origin validation (RFC 6811)",
+   "lines": 46
+  },
+  {
+   "path": "measure/pathcheck.py",
+   "what": "Valley-free path checks behind ASPA and RFC 9234",
+   "lines": 53
+  },
+  {
+   "path": "guard/engine.py",
+   "what": "The ConeGuard decision engine",
+   "lines": 107
+  },
+  {
+   "path": "replay/evaluate.py",
+   "what": "Compares every defence on every incident",
+   "lines": 104
+  },
+  {
+   "path": "replay/false_alarms.py",
+   "what": "Counts false alarms on 41 normal days",
+   "lines": 143
+  },
+  {
+   "path": "sim/policies.py",
+   "what": "ConeGuard policy for the BGPy simulator",
+   "lines": 45
+  },
+  {
+   "path": "lab/demo.py",
+   "what": "Live demo controller and web server",
+   "lines": 266
+  }
+ ],
+ "tests": 9
+}

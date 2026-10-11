@@ -1,0 +1,238 @@
+{
+  "incident": "verizon-dqe-2019",
+  "collector": "rrc00",
+  "role": "transit",
+  "updates_replayed": 7605160,
+  "baseline_v4": 1,
+  "baseline_v6": 0,
+  "leaked_prefixes": 6252,
+  "leaked_v4": 6252,
+  "leaked_v6": 0,
+  "first_leak_utc": "10:34:22",
+  "path_tail": [
+    [
+      "396531 33154 3356 13335",
+      35278
+    ],
+    [
+      "396531 33154 209 4323",
+      20182
+    ],
+    [
+      "396531 33154 174 63949",
+      9410
+    ]
+  ],
+  "via_upstream_pct": 100.0,
+  "upstream_counts": [
+    [
+      "701",
+      6252
+    ]
+  ],
+  "peers_total": 79,
+  "peers_with_leak": 39,
+  "victim_ases": 794,
+  "top_victims": [
+    {
+      "asn": 174,
+      "name": "COGENT-174 - Cogent Communications, LLC",
+      "prefixes": 1582
+    },
+    {
+      "asn": 3257,
+      "name": "GTT-BACKBONE GTT Communications Inc.",
+      "prefixes": 377
+    },
+    {
+      "asn": 46573,
+      "name": "VAULT-HOST - Vault Host",
+      "prefixes": 307
+    },
+    {
+      "asn": 53889,
+      "name": "WJY - WJY LLC",
+      "prefixes": 248
+    },
+    {
+      "asn": 26484,
+      "name": "EVANS-ASN-1 - Columbia County Board of Education",
+      "prefixes": 139
+    },
+    {
+      "asn": 26375,
+      "name": "AIRESPRING - AIRESPRING, INC.",
+      "prefixes": 106
+    },
+    {
+      "asn": 13335,
+      "name": "CLOUDFLARENET - Cloudflare, Inc.",
+      "prefixes": 95
+    },
+    {
+      "asn": 395111,
+      "name": "KVCNET-2009 - KVCHOSTING.COM LLC",
+      "prefixes": 94
+    },
+    {
+      "asn": 42366,
+      "name": "TERRATRANSIT-AS TerraTransit AG",
+      "prefixes": 89
+    },
+    {
+      "asn": 63008,
+      "name": "SIMPLE-ASN - SIMPLE CLOUD SOLUTION LLC",
+      "prefixes": 84
+    },
+    {
+      "asn": 13999,
+      "name": "AS13999 - Mega Cable, S.A. de C.V.",
+      "prefixes": 77
+    },
+    {
+      "asn": 20940,
+      "name": "AKAMAI-ASN1 Akamai International B.V.",
+      "prefixes": 59
+    },
+    {
+      "asn": 3292,
+      "name": "TDC TDC Holding A/S",
+      "prefixes": 50
+    },
+    {
+      "asn": 21889,
+      "name": "RAPIDSYSTEMS - Rapid Systems Corporation",
+      "prefixes": 42
+    },
+    {
+      "asn": 198471,
+      "name": "OPNET-AS Opnet Srl",
+      "prefixes": 41
+    }
+  ],
+  "rov_then_day": "2019-06-24",
+  "rov_then": {
+    "valid": {
+      "count": 213,
+      "pct": 3.4
+    },
+    "invalid": {
+      "count": 128,
+      "pct": 2.0
+    },
+    "notfound": {
+      "count": 5911,
+      "pct": 94.5
+    }
+  },
+  "rov_now_day": "2026-10-11",
+  "rov_now": {
+    "valid": {
+      "count": 1361,
+      "pct": 21.8
+    },
+    "invalid": {
+      "count": 1715,
+      "pct": 27.4
+    },
+    "notfound": {
+      "count": 3176,
+      "pct": 50.8
+    }
+  },
+  "path_check": {
+    "valley": {
+      "count": 6252,
+      "pct": 100.0
+    },
+    "valley-free": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "unknown": {
+      "count": 0,
+      "pct": 0.0
+    }
+  },
+  "distinct_leaked_paths": {
+    "valley": 6277
+  },
+  "max_prefix": {
+    "1.5x": {
+      "limit": 2,
+      "trips_at": "10:34:22",
+      "leaked_before_trip": 1,
+      "contained_pct": 100.0
+    },
+    "2x": {
+      "limit": 2,
+      "trips_at": "10:34:22",
+      "leaked_before_trip": 1,
+      "contained_pct": 100.0
+    },
+    "3x": {
+      "limit": 3,
+      "trips_at": "10:34:22",
+      "leaked_before_trip": 2,
+      "contained_pct": 100.0
+    },
+    "5x": {
+      "limit": 5,
+      "trips_at": "10:34:22",
+      "leaked_before_trip": 4,
+      "contained_pct": 99.9
+    },
+    "10x": {
+      "limit": 10,
+      "trips_at": "10:34:22",
+      "leaked_before_trip": 9,
+      "contained_pct": 99.9
+    }
+  },
+  "checkpoints": {
+    "11:00": {
+      "prefixes": 435,
+      "victim_ases": 86,
+      "via_upstream": 435,
+      "peers": 38
+    },
+    "12:00": {
+      "prefixes": 345,
+      "victim_ases": 55,
+      "via_upstream": 345,
+      "peers": 38
+    },
+    "12:59": {
+      "prefixes": 29,
+      "victim_ases": 6,
+      "via_upstream": 29,
+      "peers": 1
+    }
+  },
+  "rov_then_has_roa_pct": 5.5,
+  "rov_now_has_roa_pct": 49.2,
+  "rov_then_invalid_pct": 2.0,
+  "rov_now_invalid_pct": 27.4,
+  "path_valley_pct": 100.0,
+  "path_any_valley_pct": 100.0,
+  "lingering": {
+    "11:00": {
+      "prefixes": 435,
+      "victim_ases": 86,
+      "via_upstream": 435,
+      "peers": 38
+    },
+    "12:00": {
+      "prefixes": 345,
+      "victim_ases": 55,
+      "via_upstream": 345,
+      "peers": 38
+    },
+    "12:59": {
+      "prefixes": 29,
+      "victim_ases": 6,
+      "via_upstream": 29,
+      "peers": 1
+    }
+  }
+}

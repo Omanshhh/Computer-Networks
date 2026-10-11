@@ -1,0 +1,8 @@
+pybgpkit>=0.9
+pandas>=2.2
+requests>=2.31
+pyyaml>=6.0
+matplotlib>=3.8
+scipy>=1.13
+bgpy-pkg>=13.0
+pytest>=8.0

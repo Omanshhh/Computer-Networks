@@ -1,0 +1,236 @@
+{
+  "incident": "rostelecom-2020",
+  "collector": "rrc00",
+  "role": "origin",
+  "updates_replayed": 18651374,
+  "baseline_v4": 2482,
+  "baseline_v6": 14,
+  "leaked_prefixes": 8867,
+  "leaked_v4": 8867,
+  "leaked_v6": 0,
+  "first_leak_utc": "19:27:06",
+  "path_tail": [
+    [
+      "3257 174 20764 12389",
+      255826
+    ],
+    [
+      "3356 174 20764 12389",
+      226727
+    ],
+    [
+      "39533 13030 20764 12389",
+      122575
+    ]
+  ],
+  "via_upstream_pct": null,
+  "upstream_counts": [
+    [
+      "20764",
+      8867
+    ]
+  ],
+  "peers_total": 145,
+  "peers_with_leak": 74,
+  "victim_ases": 175,
+  "top_victims": [
+    {
+      "asn": 16509,
+      "name": "AMAZON-02 - Amazon.com, Inc.",
+      "prefixes": 3366
+    },
+    {
+      "asn": 14618,
+      "name": "AMAZON-AES - Amazon.com, Inc.",
+      "prefixes": 2531
+    },
+    {
+      "asn": 14061,
+      "name": "DIGITALOCEAN-ASN - DigitalOcean, LLC",
+      "prefixes": 700
+    },
+    {
+      "asn": 13335,
+      "name": "CLOUDFLARENET - Cloudflare, Inc.",
+      "prefixes": 185
+    },
+    {
+      "asn": 20940,
+      "name": "AKAMAI-ASN1 Akamai International B.V.",
+      "prefixes": 139
+    },
+    {
+      "asn": 63949,
+      "name": "AKAMAI-LINODE-AP - Akamai Connected Cloud",
+      "prefixes": 134
+    },
+    {
+      "asn": 24940,
+      "name": "HETZNER-AS Hetzner Online GmbH",
+      "prefixes": 125
+    },
+    {
+      "asn": 16276,
+      "name": "OVH OVH SAS",
+      "prefixes": 62
+    },
+    {
+      "asn": 61317,
+      "name": "ASDETUK Hivelocity LLC",
+      "prefixes": 37
+    },
+    {
+      "asn": 20473,
+      "name": "AS-VULTR - The Constant Company, LLC",
+      "prefixes": 35
+    },
+    {
+      "asn": 3356,
+      "name": "LEVEL3 - Level 3 Parent, LLC",
+      "prefixes": 32
+    },
+    {
+      "asn": 42946,
+      "name": "AS-LEGACO Legaco Networks B.V.",
+      "prefixes": 32
+    },
+    {
+      "asn": 51167,
+      "name": "CONTABO Contabo GmbH",
+      "prefixes": 30
+    },
+    {
+      "asn": 50673,
+      "name": "Serverius-as Serverius Holding B.V.",
+      "prefixes": 25
+    },
+    {
+      "asn": 60781,
+      "name": "LEASEWEB-NL-AMS-01 LeaseWeb Netherlands B.V.",
+      "prefixes": 21
+    }
+  ],
+  "rov_then_day": "2020-04-01",
+  "rov_then": {
+    "valid": {
+      "count": 14,
+      "pct": 0.2
+    },
+    "invalid": {
+      "count": 6945,
+      "pct": 78.3
+    },
+    "notfound": {
+      "count": 1908,
+      "pct": 21.5
+    }
+  },
+  "rov_now_day": "2026-10-11",
+  "rov_now": {
+    "valid": {
+      "count": 596,
+      "pct": 6.7
+    },
+    "invalid": {
+      "count": 8025,
+      "pct": 90.5
+    },
+    "notfound": {
+      "count": 246,
+      "pct": 2.8
+    }
+  },
+  "path_check": {
+    "valley": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "valley-free": {
+      "count": 8867,
+      "pct": 100.0
+    },
+    "unknown": {
+      "count": 0,
+      "pct": 0.0
+    }
+  },
+  "distinct_leaked_paths": {
+    "valley-free": 891,
+    "valley": 422,
+    "unknown": 23
+  },
+  "max_prefix": {
+    "1.5x": {
+      "limit": 3723,
+      "trips_at": "19:27:11",
+      "leaked_before_trip": 1241,
+      "contained_pct": 86.0
+    },
+    "2x": {
+      "limit": 4964,
+      "trips_at": "19:27:28",
+      "leaked_before_trip": 2482,
+      "contained_pct": 72.0
+    },
+    "3x": {
+      "limit": 7446,
+      "trips_at": "19:29:38",
+      "leaked_before_trip": 4964,
+      "contained_pct": 44.0
+    },
+    "5x": {
+      "limit": 12410,
+      "trips_at": null
+    },
+    "10x": {
+      "limit": 24820,
+      "trips_at": null
+    }
+  },
+  "checkpoints": {
+    "19:45": {
+      "prefixes": 6437,
+      "victim_ases": 90,
+      "via_upstream": 0,
+      "peers": 4
+    },
+    "20:15": {
+      "prefixes": 6437,
+      "victim_ases": 90,
+      "via_upstream": 0,
+      "peers": 4
+    },
+    "20:59": {
+      "prefixes": 6437,
+      "victim_ases": 90,
+      "via_upstream": 0,
+      "peers": 4
+    }
+  },
+  "rov_then_has_roa_pct": 78.5,
+  "rov_now_has_roa_pct": 97.2,
+  "rov_then_invalid_pct": 78.3,
+  "rov_now_invalid_pct": 90.5,
+  "path_valley_pct": 0.0,
+  "path_any_valley_pct": 100.0,
+  "lingering": {
+    "19:45": {
+      "prefixes": 6437,
+      "victim_ases": 90,
+      "via_upstream": 0,
+      "peers": 4
+    },
+    "20:15": {
+      "prefixes": 6437,
+      "victim_ases": 90,
+      "via_upstream": 0,
+      "peers": 4
+    },
+    "20:59": {
+      "prefixes": 6437,
+      "victim_ases": 90,
+      "via_upstream": 0,
+      "peers": 4
+    }
+  }
+}

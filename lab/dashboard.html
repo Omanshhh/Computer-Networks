@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ConeGuard Live Demo</title>
+<style>
+  :root {
+    --bg: #f6f7f9; --panel: #ffffff; --ink: #16181d; --muted: #5d6573; --line: #dde1e7;
+    --good: #1a7f4b; --good-bg: #e3f4ea; --bad: #b42318; --bad-bg: #fde7e5; --warn: #9a6700; --warn-bg: #fff4d6;
+    --accent: #2f5bd3; --accent-bg: #e8eefc; --chart-a: #2f5bd3; --chart-b: #b42318;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #111317; --panel: #1a1d23; --ink: #eceff4; --muted: #9aa3b2; --line: #2c313a;
+      --good: #4cc38a; --good-bg: #13301f; --bad: #ff7b6e; --bad-bg: #3a1714; --warn: #f0b73a; --warn-bg: #352a10;
+      --accent: #7aa2ff; --accent-bg: #1c2742; --chart-a: #7aa2ff; --chart-b: #ff7b6e;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 1180px; margin: 0 auto; padding: 24px 16px 40px; }
+  h1 { font-size: 24px; margin: 0 0 4px; }
+  .sub { color: var(--muted); margin: 0 0 20px; }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 16px; }
+  .label { font-size: 12px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+  .controls { display: grid; grid-template-columns: 1fr auto; gap: 16px; margin-bottom: 16px; }
+  .seg { display: flex; flex-wrap: wrap; gap: 8px; }
+  button { font: inherit; border: 1px solid var(--line); background: var(--panel); color: var(--ink); border-radius: 8px; padding: 8px 14px; cursor: pointer; }
+  button:hover { border-color: var(--accent); }
+  button.on { background: var(--accent-bg); border-color: var(--accent); color: var(--accent); font-weight: 600; }
+  button.danger { border-color: var(--bad); color: var(--bad); }
+  .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 16px; }
+  .tile { border-radius: 10px; padding: 18px; border: 1px solid var(--line); background: var(--panel); }
+  .tile .who { font-size: 13px; color: var(--muted); }
+  .tile .name { font-size: 22px; font-weight: 700; margin: 2px 0 6px; }
+  .tile .verdict { font-size: 18px; font-weight: 600; }
+  .tile.ok { background: var(--good-bg); border-color: var(--good); } .tile.ok .verdict { color: var(--good); }
+  .tile.down { background: var(--bad-bg); border-color: var(--bad); } .tile.down .verdict { color: var(--bad); }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .stat .v { font-size: 26px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .stat .k { font-size: 12px; color: var(--muted); }
+  .pill { display: inline-block; padding: 2px 10px; border-radius: 999px; font-weight: 600; font-size: 13px; }
+  .pill.good { background: var(--good-bg); color: var(--good); } .pill.bad { background: var(--bad-bg); color: var(--bad); }
+  .pill.warn { background: var(--warn-bg); color: var(--warn); } .pill.neutral { background: var(--accent-bg); color: var(--accent); }
+  .row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; gap: 8px; flex-wrap: wrap; }
+  svg { width: 100%; height: 190px; display: block; }
+  .legend { display: flex; gap: 16px; font-size: 12px; color: var(--muted); margin-top: 6px; }
+  .legend i { display: inline-block; width: 14px; height: 3px; vertical-align: middle; margin-right: 6px; }
+  ol { list-style: none; margin: 0; padding: 0; max-height: 220px; overflow: auto; font-size: 14px; }
+  ol li { padding: 6px 0; border-bottom: 1px solid var(--line); } ol li span { color: var(--muted); margin-right: 8px; font-variant-numeric: tabular-nums; }
+  @media (max-width: 760px) { .tiles, .grid2, .controls { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>ConeGuard live demo: the 16 April 2021 Vodafone Idea leak</h1>
+  <p class="sub">A user behind Airtel's customer network browses Google, Fastly and Vodafone. Vodafone (AS55410) re-originates the real prefixes it leaked in 2021; choose how Airtel (AS9498) protects its Vodafone session.</p>
+
+  <div class="controls">
+    <div class="panel">
+      <div class="label">Airtel's protection on the Vodafone session</div>
+      <div class="seg" id="modes"></div>
+    </div>
+    <div class="panel">
+      <div class="label">Vodafone</div>
+      <div class="seg">
+        <button class="danger" onclick="act('leak')">Start the leak</button>
+        <button onclick="act('stop')">Stop the leak</button>
+        <button onclick="act('reset')">Reset</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="tiles" id="tiles"></div>
+
+  <div class="grid2">
+    <div class="panel">
+      <div class="row"><div class="label" style="margin:0">Airtel's session with Vodafone</div><span id="session" class="pill neutral">?</span></div>
+      <div class="stats">
+        <div class="stat"><div class="v" id="injected">0</div><div class="k">leaked routes Vodafone announces</div></div>
+        <div class="stat"><div class="v" id="accepted">0</div><div class="k">routes Airtel accepts from Vodafone (8 are Vodafone's own)</div></div>
+        <div class="stat"><div class="v" id="limit">-</div><div class="k">max-prefix limit</div></div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="row"><div class="label" style="margin:0">ConeGuard</div><span id="burst" class="pill neutral">inactive</span></div>
+      <div class="stats">
+        <div class="stat"><div class="v" id="rejected">0</div><div class="k">rejected, RPKI-invalid</div></div>
+        <div class="stat"><div class="v" id="quarantined">0</div><div class="k">quarantined as foreign</div></div>
+        <div class="stat"><div class="v" id="alerted">0</div><div class="k">accepted with an alert</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="panel">
+      <div class="label">Routes over time</div>
+      <svg id="chart" viewBox="0 0 560 190" preserveAspectRatio="none" role="img" aria-label="Leaked and accepted routes over time"></svg>
+      <div class="legend"><span><i style="background:var(--chart-b)"></i>leaked routes announced by Vodafone</span><span><i style="background:var(--chart-a)"></i>routes Airtel accepts from Vodafone</span></div>
+    </div>
+    <div class="panel">
+      <div class="label">What happened</div>
+      <ol id="events"></ol>
+    </div>
+  </div>
+</main>
+<script>
+const SITES = [["Google", "172.217.179.0/24, RPKI-signed in 2021"], ["Fastly", "167.82.163.0/24, no RPKI record in 2021"], ["Vodafone", "Vodafone's own site, 118.185.0.0/16"]];
+const $ = id => document.getElementById(id);
+const fmt = n => (n ?? 0).toLocaleString();
+async function act(path) { await fetch("/" + path, { method: "POST" }); refresh(); }
+
+function render(s) {
+  $("modes").innerHTML = Object.entries(s.modes || {}).map(([k, v]) =>
+    `<button class="${k === s.mode ? "on" : ""}" onclick="act('mode/${k}')">${v}</button>`).join("");
+  $("tiles").innerHTML = SITES.map(([name, note]) => {
+    const ok = s.reach && s.reach[name];
+    return `<div class="tile ${ok ? "ok" : "down"}"><div class="who">User to</div><div class="name">${name}</div>
+            <div class="verdict">${ok ? "Reachable" : "Unreachable"}</div><div class="who">${note}</div></div>`;
+  }).join("");
+  const up = s.session === "Established";
+  $("session").className = "pill " + (up ? "good" : "bad");
+  $("session").textContent = up ? "Established" : (s.session || "?") + " (down)";
+  $("injected").textContent = fmt(s.injected);
+  $("accepted").textContent = fmt(s.accepted);
+  $("limit").textContent = s.mode === "maxprefix" ? "16" : "-";
+  const active = s.mode === "coneguard" || s.mode === "rov";
+  $("burst").className = "pill " + (!active ? "neutral" : s.burst ? "warn" : "good");
+  $("burst").textContent = !active ? "inactive" : s.mode === "rov" ? "ROV only" : s.burst ? "Mass leak detected: quarantining" : "Watching";
+  const c = s.counts || {};
+  $("rejected").textContent = fmt(c.reject); $("quarantined").textContent = fmt(c.quarantine); $("alerted").textContent = fmt(c.alert);
+  $("events").innerHTML = (s.events || []).map(e => `<li><span>${e.t}</span>${e.msg}</li>`).join("");
+  drawChart(s.history || []);
+}
+
+function drawChart(h) {
+  const svg = $("chart"), W = 560, H = 190, pad = 8;
+  if (!h.length) { svg.innerHTML = ""; return; }
+  const max = Math.max(10, ...h.map(p => Math.max(p.injected, p.accepted)));
+  const x = i => pad + (W - 2 * pad) * (h.length === 1 ? 1 : i / (h.length - 1));
+  const y = v => H - pad - (H - 2 * pad) * v / max;
+  const line = key => h.map((p, i) => `${i ? "L" : "M"}${x(i).toFixed(1)} ${y(p[key]).toFixed(1)}`).join(" ");
+  svg.innerHTML = `<line x1="${pad}" x2="${W - pad}" y1="${H - pad}" y2="${H - pad}" stroke="var(--line)"/>
+    <text x="${pad + 2}" y="${pad + 10}" font-size="11" fill="var(--muted)">${fmt(max)} routes</text>
+    <path d="${line("injected")}" fill="none" stroke="var(--chart-b)" stroke-width="2"/>
+    <path d="${line("accepted")}" fill="none" stroke="var(--chart-a)" stroke-width="2"/>`;
+}
+
+async function refresh() {
+  try { render(await (await fetch("/state")).json()); } catch (e) {}
+}
+setInterval(refresh, 1000); refresh();
+</script>
+</body>
+</html>

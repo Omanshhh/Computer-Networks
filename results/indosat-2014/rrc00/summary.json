@@ -1,0 +1,255 @@
+{
+  "incident": "indosat-2014",
+  "collector": "rrc00",
+  "role": "origin",
+  "updates_replayed": 3076292,
+  "baseline_v4": 303,
+  "baseline_v6": 14,
+  "leaked_prefixes": 7675,
+  "leaked_v4": 7669,
+  "leaked_v6": 6,
+  "first_leak_utc": "18:25:31",
+  "path_tail": [
+    [
+      "7018 2914 4761",
+      73688
+    ],
+    [
+      "15469 6762 2914 4761",
+      40982
+    ],
+    [
+      "48039 3320 2914 4761",
+      30943
+    ]
+  ],
+  "via_upstream_pct": null,
+  "upstream_counts": [
+    [
+      "2914",
+      3905
+    ],
+    [
+      "6939",
+      2685
+    ],
+    [
+      "1103",
+      1545
+    ],
+    [
+      "12859",
+      1415
+    ],
+    [
+      "3491",
+      230
+    ]
+  ],
+  "peers_total": 30,
+  "peers_with_leak": 18,
+  "victim_ases": 1388,
+  "top_victims": [
+    {
+      "asn": 9340,
+      "name": "INDONET-AS-AP - INDO Internet, PT",
+      "prefixes": 329
+    },
+    {
+      "asn": 10139,
+      "name": "SMARTBRO-PH-AP - Smart Broadband, Inc.",
+      "prefixes": 132
+    },
+    {
+      "asn": 23700,
+      "name": "Fastnet-AS-ID - Linknet-Fastnet ASN",
+      "prefixes": 111
+    },
+    {
+      "asn": 20940,
+      "name": "AKAMAI-ASN1 Akamai International B.V.",
+      "prefixes": 108
+    },
+    {
+      "asn": 16625,
+      "name": "AKAMAI-AS - Akamai Technologies, Inc.",
+      "prefixes": 93
+    },
+    {
+      "asn": 3356,
+      "name": "LEVEL3 - Level 3 Parent, LLC",
+      "prefixes": 74
+    },
+    {
+      "asn": 4434,
+      "name": "ERX-RADNET1-AS - PT Rahajasa Media Internet",
+      "prefixes": 73
+    },
+    {
+      "asn": 9785,
+      "name": "JASATELNET-AS-ID - PT Berca Hardayaperkasa",
+      "prefixes": 73
+    },
+    {
+      "asn": 11492,
+      "name": "CABLEONE - CABLE ONE, INC.",
+      "prefixes": 72
+    },
+    {
+      "asn": 18059,
+      "name": "DTPNET-AS-AP - DTPNET NAP",
+      "prefixes": 71
+    },
+    {
+      "asn": 24207,
+      "name": "EXPRESSNET-AS-ID - PT NettoCyber Indonesia",
+      "prefixes": 71
+    },
+    {
+      "asn": 56859,
+      "name": "Hellobank BNP PARIBAS S.A.",
+      "prefixes": 70
+    },
+    {
+      "asn": 17885,
+      "name": "JKTXLNET-AS-AP - PT XL Axiata Tbk",
+      "prefixes": 69
+    },
+    {
+      "asn": 4855,
+      "name": "PI-ID-AS-AP - Pacific Link Indonesia",
+      "prefixes": 66
+    },
+    {
+      "asn": 23949,
+      "name": "COMNET-AS-ID - PT Comtronics Systems",
+      "prefixes": 59
+    }
+  ],
+  "rov_then_day": null,
+  "rov_then": null,
+  "rov_now_day": "2026-10-11",
+  "rov_now": {
+    "valid": {
+      "count": 28,
+      "pct": 0.4
+    },
+    "invalid": {
+      "count": 5304,
+      "pct": 69.1
+    },
+    "notfound": {
+      "count": 2343,
+      "pct": 30.5
+    }
+  },
+  "path_check": {
+    "valley": {
+      "count": 146,
+      "pct": 1.9
+    },
+    "valley-free": {
+      "count": 7528,
+      "pct": 98.1
+    },
+    "unknown": {
+      "count": 1,
+      "pct": 0.0
+    }
+  },
+  "distinct_leaked_paths": {
+    "unknown": 13,
+    "valley-free": 253,
+    "valley": 596
+  },
+  "max_prefix": {
+    "1.5x": {
+      "limit": 454,
+      "trips_at": "18:31:42",
+      "leaked_before_trip": 151,
+      "contained_pct": 98.0
+    },
+    "2x": {
+      "limit": 606,
+      "trips_at": "18:31:42",
+      "leaked_before_trip": 303,
+      "contained_pct": 96.0
+    },
+    "3x": {
+      "limit": 909,
+      "trips_at": "18:31:45",
+      "leaked_before_trip": 606,
+      "contained_pct": 92.1
+    },
+    "5x": {
+      "limit": 1515,
+      "trips_at": "18:31:51",
+      "leaked_before_trip": 1212,
+      "contained_pct": 84.2
+    },
+    "10x": {
+      "limit": 3030,
+      "trips_at": "18:32:20",
+      "leaked_before_trip": 2727,
+      "contained_pct": 64.4
+    }
+  },
+  "checkpoints": {
+    "19:00": {
+      "prefixes": 3730,
+      "victim_ases": 669,
+      "via_upstream": 0,
+      "peers": 17
+    },
+    "20:00": {
+      "prefixes": 1989,
+      "victim_ases": 259,
+      "via_upstream": 0,
+      "peers": 17
+    },
+    "21:15": {
+      "prefixes": 3,
+      "victim_ases": 1,
+      "via_upstream": 0,
+      "peers": 4
+    },
+    "21:59": {
+      "prefixes": 0,
+      "victim_ases": 0,
+      "via_upstream": 0,
+      "peers": 0
+    }
+  },
+  "rov_then_has_roa_pct": null,
+  "rov_now_has_roa_pct": 69.5,
+  "rov_then_invalid_pct": null,
+  "rov_now_invalid_pct": 69.1,
+  "path_valley_pct": 1.9,
+  "path_any_valley_pct": 16.8,
+  "lingering": {
+    "19:00": {
+      "prefixes": 3730,
+      "victim_ases": 669,
+      "via_upstream": 0,
+      "peers": 17
+    },
+    "20:00": {
+      "prefixes": 1989,
+      "victim_ases": 259,
+      "via_upstream": 0,
+      "peers": 17
+    },
+    "21:15": {
+      "prefixes": 3,
+      "victim_ases": 1,
+      "via_upstream": 0,
+      "peers": 4
+    },
+    "21:59": {
+      "prefixes": 0,
+      "victim_ases": 0,
+      "via_upstream": 0,
+      "peers": 0
+    }
+  }
+}
